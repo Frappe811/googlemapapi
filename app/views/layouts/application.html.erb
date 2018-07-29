@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Googlemapapi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Kv4ug9Lkt1It1AP4GgfcLd2KPNVxybU&sensor=false&libraries=places"></script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

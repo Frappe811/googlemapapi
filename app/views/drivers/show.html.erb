@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+
+<!-- <div id="driver">
+  <div id="lat">
+    <%= @driver.lat %>
+  </div>
+  <div id="lng">
+    <%= @driver.lng %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_driver_path(@driver) %> |
+<%= link_to 'Back', drivers_path %> -->
+
+<div>G-Lab: 10.766455 106.695324 | RetroKid 10.771866 106.684245 | My company 10.768016 106.696344 | FPT 10.852939 106.629545 </div>
+
+<%= form_for(@driver, remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :lat %>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lng %>
+    <%= f.text_area :lng %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update Driver Position" %>
+  </div>
+<% end %>
+
+<div id="map"></div>
